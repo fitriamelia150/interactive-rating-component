@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="give-rating" style="display: flex;">
+      <div class="star">
+        <img src="./images/icon-star.svg" alt="icon-star">
+      </div>
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appriaciated to help us improve our offering!</p>
+  
+      <div class="ratings">
+        <a href="#" onclick="clickRating(1)">
+          1
+          <input type="radio" name="rt" id="rt-1" value="1" hidden>
+        </a>
+  
+        <a href="#" onclick="clickRating(2)">
+          2
+          <input type="radio" name="rt" id="rt-2" value="2" hidden>
+        </a>
+        
+        <a href="#" onclick="clickRating(3)">
+          3
+          <input type="radio" name="rt" id="rt-3" value="3" hidden>
+        </a>
+  
+        <a href="#" onclick="clickRating(4)">
+          4
+          <input type="radio" name="rt" id="rt-4" value="4" hidden>
+        </a>
+        
+        <a href="#" onclick="clickRating(5)">
+          5
+          <input type="radio" name="rt" id="rt-5" value="5" hidden>
+        </a>
+      </div>
+  
+      <a href="#" onclick="submitRating()">submit</a>
+    </div>
+
+    <div class="show-notif" style="display: none;">
+      <img src="./images/illustration-thank-you.svg" alt="">
+
+      <p class="info-rating">You selected <span id="show-rating"></span> out of 5</p>
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
+  </div>
+
+</body>
+
+<script src="index.js"></script>
+</html>
