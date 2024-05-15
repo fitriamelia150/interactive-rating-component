@@ -27,24 +27,22 @@ body {
     font-family: Overpass;
 }
 
-.card .give-rating {
+.card {
     background-color: hsl(213, 19%, 18%);
     padding: 30px 20px;
     border-radius: 20px;
     width: 340px;
+}
+
+.card .give-rating {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    transition: opacity 2s;
 }
 
 
 
 .card .show-notif {
-    background-color: hsl(213, 19%, 18%);
-    padding: 30px 20px;
-    border-radius: 20px;
-    width: 340px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -135,4 +133,21 @@ p {
     padding: 10px 20px;
     border-radius: 20px;
     color: hsl(25, 97%, 53%);
+}
+
+.loading img{
+    width: 25px;
+    -webkit-animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@media screen and (width > 375px) {
+    .card {
+        width: 400px;
+        gap: 30px;
+        padding: 40px;
+    }
 }

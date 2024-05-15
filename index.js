@@ -3,16 +3,19 @@ function clickRating(rating) {
 }
 
 function submitRating() {
-    document.querySelector('.give-rating').style.opacity = '0';
+    document.querySelector('.loading').style.display = 'block';
+    document.querySelector('.card').style.display = 'none';
+    document.querySelector('.give-rating').style.display = 'none';
+
     setTimeout(()=>{
-        document.querySelector('.give-rating').style.display = 'none';
-    },2000)
+        document.querySelector('.loading').style.display = 'none';
+    },1000)
     
     setTimeout(()=>{
-        document.querySelector('.show-notif').style.opacity = '1';
+        document.querySelector('.card').style.display = 'block';
         document.querySelector('.show-notif').style.display = 'flex';
         const rating = document.querySelector('input[name="rt"]:checked').value;
         document.querySelector('#show-rating').innerHTML = rating;
-    },2000)
+    },1000)
 
 }
